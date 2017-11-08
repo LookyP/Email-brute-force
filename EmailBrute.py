@@ -1,7 +1,7 @@
 import smtplib #the SMTP library required for the connection
 import time #time import
-global emailUser
 
+global emailUser
 global emailPass
 global filePass
 

